@@ -228,7 +228,7 @@ The results should match those in `runs/detect/train_personal_model/` and `runs/
 Made by Team: OpenHivers at HackByte 3.0
 
 ### Team Members:
-- Sujal Sakahre
+- Sujal Sakhare
 - Garv Anand
 - Harshit Chakravarti
 - Arjun 
