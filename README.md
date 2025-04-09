@@ -65,7 +65,35 @@ The dataset used in this project is organized in the YOLO format but is not incl
 
 ## Setup Instructions
 
-1. Create a Python virtual environment (recommended):
+### 1. Environment Setup
+
+#### Using Anaconda (Recommended)
+1. Install Anaconda if you haven't already
+2. Navigate to the `ENV_SETUP` subfolder in the Hackbyte_Dataset folder:
+   ```bash
+   cd ENV_SETUP
+   ```
+3. Run the environment setup script:
+   - For Windows:
+     ```bash
+     setup_env.bat
+     ```
+   - For Mac/Linux:
+     ```bash
+     # Create and run setup_env.sh with equivalent commands
+     chmod +x setup_env.sh
+     ./setup_env.sh
+     ```
+   This will create an environment called "EDU" with all required dependencies.
+
+4. Activate the environment:
+   ```bash
+   conda activate EDU
+   ```
+
+#### Alternative Setup (Using venv)
+If you prefer not using Anaconda, you can use Python's virtual environment:
+1. Create a Python virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
@@ -76,7 +104,38 @@ The dataset used in this project is organized in the YOLO format but is not incl
    pip install ultralytics opencv-python numpy pyyaml
    ```
 
-3. Place the dataset in the `data/` directory as described above
+### 2. Dataset Setup
+
+1. Download the dataset from the provided page by the organizers
+   - The dataset includes:
+     - Pre-collected images and YOLO-compatible labels
+     - Sample Training and Prediction scripts
+     - Configuration files (config.yaml)
+   - Data is already separated into Train, Val, and Test folders
+
+2. Place the dataset in the `data/` directory with the following structure:
+   ```
+   data/
+   ├── train/
+   │   ├── images/
+   │   └── labels/
+   ├── val/
+   │   ├── images/
+   │   └── labels/
+   └── test/
+       ├── images/
+       └── labels/
+   ```
+
+### 3. Verify Setup
+
+1. Ensure you're in the project root directory
+2. Activate the environment if not already active:
+   ```bash
+   conda activate EDU
+   ```
+3. Verify the dataset structure is correct
+4. Ensure all configuration files are in place
 
 ## Training the Model
 
